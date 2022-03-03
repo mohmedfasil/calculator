@@ -15,26 +15,25 @@ require_once "calculator.php";
 
 echo "The first number is:".$_POST["fnum"]."<br>";
 echo "The second number is:".$_POST["snum"];
+
+$add=new Calculator;
+
 if (is_numeric($_POST["fnum"])==true && is_numeric($_POST["snum"])==true)
 {
     if (isset($_POST["Addition"]))
-    {            
-        $add=new Calculator;
+    {                
         $add->Addition($_POST["fnum"],$_POST["snum"]);
     }
     elseif (isset($_POST["Substraction"]))
-    {
-        $sub=new Calculator;
+    { 
         $sub->Substraction($_POST["fnum"],$_POST["snum"]); 
     }
     elseif (isset($_POST["Multiplication"]))
-    {
-        $add=new Calculator;
+    {   
         $add->Multiplication($_POST["fnum"],$_POST["snum"]);
     }
     elseif (isset($_POST["Division"]))
     {
-        $add=new Calculator;
         $add->Division($_POST["fnum"],$_POST["snum"]);
     }
 }

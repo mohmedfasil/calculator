@@ -44,6 +44,7 @@ else
         echo "Please enter numeric values only on both fields";
 }
 
+
 ?>
 </body>
 </html>

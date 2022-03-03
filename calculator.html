@@ -2,24 +2,32 @@
 <html>
 <head>
     <title>Calculator</title>
+    <style>
+        body {text-align: center;  margin-top: 100px ; margin-bottom: 100px; margin-right: 400px; 
+            margin-left: 400px; border-style: inset; border-width: 10px;}
+        
+    </style>
 </head>
 <body>
+    
     <h1>Calculator</h1>
     <p>Calculator for calculating 4 different operations</p>
-    <form action="calculator.php" target="_blank" method="post" autocomplete="off">
-        <label for="fnumber">First number</label>
-        <input type="text" id="fnumber" name="fnum"><br>
-        <label for="snumber">Second number</label>
-        <input type="text" id="snumber" name="snum"><br>
-        <input type="submit" id="add" value="ADD" name="Addition">
-        <input type="submit" id="sub" value="SUB" name="Substraction">
-        <input type="submit" id="mul" value="MUL" name="Multiplication">
-        <input type="submit" id="div" value="DIV" name="Division">
-        <br>
-        <input type="reset" value="Reset">
+    <form action="calc_main.php" target="_blank" method="post" autocomplete="off">
+        <label for="fnumber">Number 1</label>
+        <input type="text" id="fnumber" name="fnum"><br><br>
+        <label for="snumber">Number 2</label>
+        <input type="text" id="snumber" name="snum"><br><br>
+        <input type="submit" id="add" value="ADD" name="Addition" style="padding:5px;">
+        <input type="submit" id="sub" value="SUB" name="Substraction" style="padding:5px;">
+        
+        <input type="submit" id="mul" value="MUL" name="Multiplication" style="padding:5px;">
+        <input type="submit" id="div" value="DIV" name="Division" style="padding:5px;">
+        <br><br>
+        <input type="reset" value="Reset" style="padding:5px;">
+        <br><br>
         
     </form>
-
+  
 
 </body>
 </html>

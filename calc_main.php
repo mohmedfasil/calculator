@@ -12,7 +12,6 @@
 <?php
 
 require_once "calculator.php";
-
 $Calculator=new Calculator;
 
 $a=$_POST["num1"];
@@ -21,27 +20,28 @@ $b=$_POST["num2"];
 echo "The first number is:".$a."<br>";
 echo "The second number is:".$b;
 
-if (isset($_POST["Addition"]))
-{                
-    $result=$Calculator->Addition($a,$b);
-    echo "<br><br><b>The Result of addition is <u> $result </u></b>";
-}
-elseif (isset($_POST["Substraction"]))
-{ 
-    $result=$Calculator->Substraction($a,$b);
-    echo "<br><br><b>The Result of Substraction is <u> $result </u></b>";
-}
-elseif (isset($_POST["Multiplication"]))
-{   
-    $result=$Calculator->Multiplication($a,$b);
-    echo "<br><br><b>The Result of Multiplication is <u> $result </u></b>";
-}
-elseif (isset($_POST["Division"]))
+switch (1)
 {
-    $result=$Calculator->Division($a,$b);
-    echo "<br><br><b>The Result of Division is <u> $result </u></b>";
+    case isset($_POST["Addition"]):
+        $result=$Calculator->Addition($a,$b);
+        echo "<br><br><b>The Result of addition is <u> $result </u></b>";
+        break;
+    case isset($_POST["Substraction"]):
+        $result=$Calculator->Substraction($a,$b);
+        echo "<br><br><b>The Result of Substraction is <u> $result </u></b>";
+        break;
+    case isset($_POST["Multiplication"]):
+        $result=$Calculator->Multiplication($a,$b);
+        echo "<br><br><b>The Result of Multiplication is <u> $result </u></b>";
+        break;
+    case isset($_POST["Division"]):
+        $result=$Calculator->Division($a,$b);
+        echo "<br><br><b>The Result of Division is <u> $result </u></b>";
+        break;
+    default:
+        echo "Invalid";
+ 
 }
-
 
 ?>
 </body>
